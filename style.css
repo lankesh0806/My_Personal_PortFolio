@@ -1,0 +1,324 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --text-color: #343a40;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #e9ecef;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color:#353131;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+    font-weight: 700; /* Explicitly bold for header h1 */
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #e2e6ea;
+}
+
+/* New Button Style - Removed from HTML, keeping CSS in case you re-add */
+.btn-hire-me {
+    display: inline-block;
+    background-color: #28a745; /* A nice green color */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px; /* Pill shape */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-hire-me:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-hire-me i {
+    margin-left: 10px;
+}
+
+
+section {
+    background-color: var(--bg-white);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 700; /* Explicitly bold for section titles */
+}
+
+.objective p {
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+.education-item, .experience-item, .project-item {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.education-item h3, .experience-item h3, .project-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: 1.3em;
+    font-weight: 500; /* Ensuring bold for sub-headings */
+}
+
+.education-item p, .experience-item p, .project-item p {
+    margin: 0 0 8px 0;
+    color:#000000;
+    font-size: 0.95em;
+}
+
+.education-item ul, .experience-item ul, .project-item ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-top: 5px;
+}
+
+.education-item ul li, .experience-item ul li, .project-item ul li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-category h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 5px;
+    font-weight: 500; /* Ensuring bold for skill categories */
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category ul li {
+    background-color: var(--bg-light);
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.skill-category ul li i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+.skill-category ul li:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    transform: translateX(5px);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-category ul li:hover i {
+    color: var(--bg-white);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color:#353131;
+    color: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 -2px 4px var(--shadow-light);
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .contact-info a {
+        display: block;
+        margin: 5px 0;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .btn-hire-me {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+.main-nav {
+    background-color: var(--bg-white);
+    padding: 15px 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.main-nav {
+    background-color: var(--bg-white);
+    padding: 15px 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-nav ul li a {
+    color:black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+/* Add an active state for the current section if desired (requires JavaScript to implement) */
+.main-nav ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+/* Responsive adjustments for the navigation bar */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main-nav ul li a {
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+}
+.github-link-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #212529; /* Dark color to match GitHub's aesthetic */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.github-link-btn:hover {
+    background-color: #000000; /* Darker color on hover */
+    transform: translateY(-2px); /* Lifts the button slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.github-link-btn i {
+    margin-left: 10px;
+    font-size: 1.2em; /* Makes the icon slightly larger */
+}
